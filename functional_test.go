@@ -29,7 +29,6 @@ func (s *FunctionalTestSuite) SetupTest() {
 }
 
 // Functional
-
 func (s FunctionalTestSuite) Test_Hello_ReturnsStatus200() {
 	address := fmt.Sprintf("http://%s%s/hello", s.hostIp, s.servicePath)
 	logPrintf("Sending a request to %s\n", address)
@@ -39,11 +38,11 @@ func (s FunctionalTestSuite) Test_Hello_ReturnsStatus200() {
 	s.Equal(200, resp.StatusCode, "ADDR: ", address)
 }
 
-func (s FunctionalTestSuite) Test_Person_ReturnsStatus200() {
+/* func (s FunctionalTestSuite) Test_Person_ReturnsStatus200() {
 	address := fmt.Sprintf("http://%s%s/person", s.hostIp, s.servicePath)
 	logPrintf("Sending a request to %s\n", address)
 	resp, err := http.Get(address)
 
 	s.NoError(err)
 	s.Equal(200, resp.StatusCode, "ADDR: %s", address)
-}
+} */
